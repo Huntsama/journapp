@@ -29,7 +29,7 @@
   .journal-input {
     padding: 14px 32px 14px 16px;
     margin-right: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
     border: none;
     height: 50px;
     outline: none;
@@ -38,7 +38,7 @@
   }
   
   .journal-date-input {
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 5px;
     border: none;
     height: 50px;
@@ -46,6 +46,30 @@
     width: 160px;
     box-shadow: 0px 10px 15px 15px rgba(0,0,0,0.1);
   }  
- 
-  
+  .journal-textarea {
+    padding: 14px 32px 14px 16px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 88%;
+    box-shadow: 0px 10px 15px 15px rgba(0,0,0,0.1);
+  }
+  .diary-button {
+    box-shadow: 20px 20px 25px 25px rgba(0,0,0,0.1);
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    height: 45px;
+    width: 200px;
+    border-radius: 4px;
+    margin-top: 7px;
+    cursor: pointer;
+    outline: none;
+    background: black;
+    color: white;
+    text-transform: capitalize;
+    float: left;
+    margin-left: 30px;
+  }
   
