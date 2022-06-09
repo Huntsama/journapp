@@ -1,4 +1,4 @@
-import { Add_Item } from './actions';
+import { Add_Item, Delete_Item } from './actions';
 
 const intialState = {
   journalItems: [],
@@ -21,6 +21,12 @@ const journalReducer = (state = intialState, action) => {
         ...state,
         journalItems: [item, ...state.journalItems],
       };
+      case Delete_Item :{
+        return{
+          ...state,
+          journalItems:state.journalItems.filter((item)=>item.id !== action.payload)
+        }
+      }
     default:
       return state;
   }

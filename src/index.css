@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 650px;
-    min-height: 600px;
+    min-height: 500px;
     background: white;
     text-align: center;
     margin: 128px auto;
@@ -55,24 +55,5 @@
     width: 88%;
     box-shadow: 0px 10px 15px 15px rgba(0,0,0,0.1);
   }
-  .diary-button {
-    box-shadow: 20px 20px 25px 25px rgba(0,0,0,0.1);
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    height: 45px;
-    width: 200px;
-    border-radius: 4px;
-    margin-top: 7px;
-    cursor: pointer;
-    outline: none;
-    background: black;
-    color: white;
-    text-transform: capitalize;
-    float: left;
-    margin-left: 30px;
-  }
-  .container {
-    /* display: grid; */
-    /* grid-template-columns: auto auto auto; */
-  }
+
+  
