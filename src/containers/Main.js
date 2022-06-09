@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Form from '../components/form'
 import Journal from '../components/journal'
-import { addItem } from '../redux/actions'
+import { addItem, deleteItem } from '../redux/actions'
 
 export class main extends Component {
   constructor() {
@@ -15,7 +15,7 @@ export class main extends Component {
   }
 
   render() {
-    const { addItem, journalItems } = this.props;
+    const { addItem, journalItems , deleteItem } = this.props;
     const { show, journalList } = this.state;
     return (
       <div>
@@ -28,7 +28,10 @@ export class main extends Component {
             {journalItems.length > 0 ? (
               journalItems.map((item) => {
                 return (
-                  <Journal showModal={(item) => this.setState({ show: true, journalList: item })} item={item} key={item.id} />
+                  <Journal 
+                  deleteItem={(id)=>deleteItem(id)}
+                  showModal={(item) => this.setState({ show: true, journalList: item })} 
+                  item={item} key={item.id} />
                 )
 
               })
@@ -66,7 +69,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItem(item))
+  addItem: (item) => dispatch(addItem(item)),
+  deleteItem : (id) => dispatch(deleteItem(id))
 
 })
 
